@@ -137,11 +137,9 @@ end
 Settings = game:service'HttpService':JSONEncode(readfile(Name))
 end)
 
-local LibName = tostring(math.random(1, 100))..tostring(math.random(1,50))..tostring(math.random(1, 100))
+local LibName = "Kavo"
 
-function Kavo:Destroy()
- LibName:Destroy
-end
+
 
 function Kavo:ToggleUI()
     if game.CoreGui[LibName].Enabled then
@@ -230,6 +228,8 @@ function Kavo.CreateLib(kavName, themeList)
     ScreenGui.Name = LibName
     ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     ScreenGui.ResetOnSpawn = false
+
+
 
     Main.Name = "Main"
     Main.Parent = ScreenGui
