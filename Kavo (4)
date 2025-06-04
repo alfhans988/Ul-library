@@ -137,8 +137,13 @@ end
 Settings = game:service'HttpService':JSONEncode(readfile(Name))
 end)
 
-local LibName = "Kavo"
+local function id()
+	return tostring(math.random(1, 100)) .. tostring(math.random(1, 50)) .. tostring(math.random(1, 100))
+end
 
+local LibName = id()
+
+_G.ScreenGuiDetctor = LibName
 
 
 function Kavo:ToggleUI()
